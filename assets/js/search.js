@@ -2,10 +2,9 @@
  * ==========================================================
  * ARCHIVO: search.js
  *
- * Conecta los buscadores del sitio (el del header y el que
- * aparece dentro del menú móvil) con el catálogo de productos
- * (filters.js) y hace scroll hasta la sección cuando hay una
- * búsqueda activa.
+ * Conecta los buscadores del sitio (el del header y el panel
+ * de búsqueda móvil) con el catálogo de productos (filters.js)
+ * y hace scroll hasta la sección cuando hay una búsqueda activa.
  * ==========================================================
  */
 
@@ -15,6 +14,8 @@
 
     const inputs = document.querySelectorAll(".search-input");
     const buttons = document.querySelectorAll(".search-btn");
+    const searchToggle = document.getElementById("searchToggle");
+    const mobileSearchBar = document.getElementById("mobileSearchBar");
 
     if (!inputs.length) return;
 
@@ -49,8 +50,14 @@
         }
     }
 
+    function closeMobileSearchBar() {
+        if (mobileSearchBar) mobileSearchBar.classList.remove("active");
+        if (searchToggle) searchToggle.classList.remove("active");
+    }
+
     function goToCatalogo() {
         closeMobileMenuIfOpen();
+        closeMobileSearchBar();
 
         const catalogo = document.getElementById("catalogo");
         if (catalogo) {
@@ -88,6 +95,36 @@
             if (value.trim()) goToCatalogo();
         });
 
+    });
+
+    if (searchToggle && mobileSearchBar) {
+
+        searchToggle.addEventListener("click", () => {
+
+            const opening = !mobileSearchBar.classList.contains("active");
+
+            mobileSearchBar.classList.toggle("active", opening);
+            searchToggle.classList.toggle("active", opening);
+
+            if (opening) {
+                closeMobileMenuIfOpen();
+                const input = mobileSearchBar.querySelector(".search-input");
+                if (input) input.focus();
+            }
+
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeMobileSearchBar();
+        });
+
+    }
+
+    // Si se abre el menú lateral, se cierra la barra de búsqueda.
+    document.addEventListener("click", (e) => {
+        if (e.target.closest(".menu-toggle") && mobileSearchBar && mobileSearchBar.classList.contains("active")) {
+            closeMobileSearchBar();
+        }
     });
 
 })();

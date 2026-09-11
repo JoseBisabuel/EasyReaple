@@ -113,19 +113,6 @@
 
             <nav class="navbar">
 
-                <!-- Buscador visible solo dentro del menú móvil -->
-                <div class="search-box mobile-search-box">
-
-                    <input type="text" class="search-input" placeholder="Buscar...">
-
-                    <button class="search-btn" aria-label="Buscar">
-
-                        <i class="fa-solid fa-magnifying-glass"></i>
-
-                    </button>
-
-                </div>
-
                 <ul class="nav-menu">
 
                     <li><a href="#inicio">Inicio</a></li>
@@ -182,6 +169,19 @@
             </a>
 
             <!-- ==========================================================
+                BOTÓN DE BÚSQUEDA MÓVIL
+                Despliega la barra de búsqueda independiente del
+                menú, para poder ver los resultados mientras se
+                escribe.
+                ========================================================== -->
+
+            <button class="search-toggle" aria-label="Buscar" id="searchToggle">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+            <!-- ==========================================================
                 BOTÓN MENÚ MÓVIL
                 ========================================================== -->
 
@@ -190,6 +190,26 @@
                 <i class="fa-solid fa-bars"></i>
 
             </button>
+
+        </div>
+
+        <!-- ==========================================================
+            BARRA DE BÚSQUEDA MÓVIL (independiente del menú)
+            ========================================================== -->
+
+        <div class="mobile-search-bar" id="mobileSearchBar">
+
+            <div class="search-box">
+
+                <input type="text" class="search-input" placeholder="Buscar...">
+
+                <button class="search-btn" aria-label="Buscar">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+            </div>
 
         </div>
 
@@ -852,8 +872,8 @@
             <p>&copy; <span id="currentYear"></span> EasyReaple. Todos los derechos reservados.</p>
 
             <p class="footer-credit">
-                Desarrollado por <strong>NOVA STUDIO 2024</strong>
-                <a href="https://wa.me/573193034610" target="_blank" aria-label="Contactar a NOVA STUDIO por WhatsApp">
+                Desarrollado por <strong>NOVA STUDIO</strong>
+                <a href="https://wa.me/573193034610?text=Hola%20NOVA%20STUDIO%2C%20vi%20el%20sitio%20web%20de%20EasyReaple%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20de%20desarrollo%20web." target="_blank" aria-label="Contactar a NOVA STUDIO por WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i> Contáctanos
                 </a>
             </p>

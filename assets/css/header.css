@@ -229,16 +229,6 @@
 
 ==========================================================*/
 
-/* Selector combinado (.search-box.mobile-search-box) para que
-   siempre gane sobre ".search-box", sin importar el orden en
-   el archivo: antes quedaba visible en todos los tamaños por
-   un empate de especificidad, duplicando el buscador. */
-.search-box.mobile-search-box{
-
-    display:none;
-
-}
-
 .search-box{
 
     display:flex;
@@ -392,6 +382,58 @@
 
 
 /*==========================================================
+    BOTÓN DE BÚSQUEDA MÓVIL Y SU PANEL DESPLEGABLE
+
+    Independiente del menú lateral: así se puede ver el
+    catálogo filtrándose en vivo mientras se escribe.
+
+==========================================================*/
+
+.search-toggle{
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:10px;
+
+    background:transparent;
+
+    color:var(--color-white);
+
+    font-size:1.2rem;
+
+    transition:.35s ease;
+
+    position:relative;
+    z-index:2;
+
+}
+
+
+.search-toggle:hover,
+.search-toggle.active{
+
+    background:rgba(255,255,255,.08);
+    color:var(--color-primary);
+
+}
+
+
+.mobile-search-bar{
+
+    display:none;
+
+}
+
+
+/*==========================================================
     EFECTOS GENERALES
 
 ==========================================================*/
@@ -491,9 +533,9 @@
 
         display:flex;
 
-        justify-content:space-between;
-
         align-items:center;
+
+        gap:8px;
 
     }
 
@@ -535,14 +577,54 @@
     }
 
     /*------------------------------------------------------
-        Buscador dentro del menú móvil.
+        Botón y panel de búsqueda móvil.
+        margin-left:auto empuja este botón (y el de menú, que
+        le sigue) hacia la derecha, dejando el logo a la
+        izquierda.
     ------------------------------------------------------*/
 
-    .search-box.mobile-search-box{
+    .search-toggle{
+
+        display:flex;
+        margin-left:auto;
+
+    }
+
+    .mobile-search-bar{
+
+        display:block;
+        position:fixed;
+        top:80px;
+        left:0;
+        width:100%;
+        padding:16px 20px;
+        background:rgba(5,13,26,.98);
+        backdrop-filter:blur(14px);
+        -webkit-backdrop-filter:blur(14px);
+        border-bottom:1px solid rgba(255,255,255,.08);
+        transform:translateY(-20px);
+        opacity:0;
+        visibility:hidden;
+        transition:transform .3s ease, opacity .3s ease, visibility .3s;
+        z-index:9996;
+
+    }
+
+    .mobile-search-bar.active{
+
+        transform:translateY(0);
+        opacity:1;
+        visibility:visible;
+
+    }
+
+    /* Selector con mayor especificidad que ".search-box{display:none}"
+       (regla que oculta el buscador de escritorio en pantallas
+       medianas), para que este sí se muestre aquí dentro. */
+    #mobileSearchBar .search-box{
 
         display:flex;
         width:100%;
-        margin-bottom:30px;
 
     }
 
@@ -633,6 +715,12 @@
 
         width:auto;
         height:48px;
+
+    }
+
+    .mobile-search-bar{
+
+        top:75px;
 
     }
 
