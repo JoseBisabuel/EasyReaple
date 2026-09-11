@@ -1,5 +1,4 @@
-# Reemplaza "tudominio.com" por tu dominio real antes de publicar el sitio.
 User-agent: *
 Allow: /
 
-Sitemap: https://tudominio.com/sitemap.xml
+Sitemap: https://josebisabuel.github.io/EasyReaple/sitemap.xml
