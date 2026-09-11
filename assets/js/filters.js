@@ -35,11 +35,15 @@
         const mensaje = encodeURIComponent(`Hola, quiero cotizar: ${product.name}`);
         const categoria = window.EasyReaple.categories[product.category] || product.category;
 
+        const thumb = product.image
+            ? `<img src="${encodeURI(product.image)}" alt="${product.name}" loading="lazy">`
+            : `<i class="${product.icon}"></i>`;
+
         return `
             <article class="product-card reveal" data-category="${product.category}">
                 ${badge}
-                <div class="product-thumb">
-                    <i class="${product.icon}"></i>
+                <div class="product-thumb${product.image ? " has-image" : ""}">
+                    ${thumb}
                 </div>
                 <div class="product-body">
                     <span class="product-category">${categoria}</span>

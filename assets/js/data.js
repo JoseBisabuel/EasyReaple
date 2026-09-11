@@ -33,6 +33,7 @@ window.EasyReaple.products = [
         category: "pantallas",
         brand: "apple",
         icon: "fa-solid fa-mobile-screen",
+        image: "assets/img/products/pantallas/Pantalla iPhone 11 OLED.webp",
         description: "Repuesto de alta calidad con instalación incluida y garantía.",
         badge: "Popular"
     },
@@ -42,6 +43,7 @@ window.EasyReaple.products = [
         category: "pantallas",
         brand: "android",
         icon: "fa-solid fa-mobile-screen",
+        image: "assets/img/products/pantallas/Pantalla Samsung Galaxy A32.webp",
         description: "Pantalla original con instalación y prueba de calidad incluida.",
         badge: null
     },
@@ -51,6 +53,7 @@ window.EasyReaple.products = [
         category: "baterias",
         brand: "apple",
         icon: "fa-solid fa-battery-full",
+        image: "assets/img/products/Baterias/Batería iPhone 12.jpg",
         description: "Batería nueva de alta capacidad, instalación el mismo día.",
         badge: null
     },
@@ -60,6 +63,7 @@ window.EasyReaple.products = [
         category: "baterias",
         brand: "android",
         icon: "fa-solid fa-battery-full",
+        image: "assets/img/products/Baterias/Batería Samsung Galaxy S21.webp",
         description: "Recupera la autonomía de tu equipo con repuesto certificado.",
         badge: null
     },
@@ -69,6 +73,7 @@ window.EasyReaple.products = [
         category: "accesorios",
         brand: "ambas",
         icon: "fa-solid fa-bolt",
+        image: "assets/img/products/Accesorios/Cargador rápido USB-C 20W.webp",
         description: "Carga rápida y segura, compatible con iPhone y Android.",
         badge: "Nuevo"
     },
@@ -78,6 +83,7 @@ window.EasyReaple.products = [
         category: "accesorios",
         brand: "apple",
         icon: "fa-solid fa-plug",
+        image: "assets/img/products/Accesorios/D_NQ_NP_772534-CBT114140798853_072026-O.webp",
         description: "Cable trenzado resistente a dobleces, ideal para uso diario.",
         badge: null
     },
@@ -87,6 +93,7 @@ window.EasyReaple.products = [
         category: "accesorios",
         brand: "ambas",
         icon: "fa-solid fa-shield-halved",
+        image: "assets/img/products/Accesorios/Case protector antigolpes.webp",
         description: "Protección reforzada en esquinas, disponible para varios modelos.",
         badge: null
     },
@@ -96,6 +103,7 @@ window.EasyReaple.products = [
         category: "repuestos",
         brand: "apple",
         icon: "fa-solid fa-microchip",
+        image: "assets/img/products/Repuestos/Flex de carga iPhone XR.jpg",
         description: "Repuesto para fallas de carga o puerto dañado.",
         badge: null
     },
@@ -105,6 +113,7 @@ window.EasyReaple.products = [
         category: "repuestos",
         brand: "android",
         icon: "fa-solid fa-camera",
+        image: "assets/img/products/Repuestos/Cámara trasera Samsung A52.webp",
         description: "Módulo de cámara original, instalación y calibración incluida.",
         badge: null
     },
@@ -114,6 +123,7 @@ window.EasyReaple.products = [
         category: "equipos",
         brand: "apple",
         icon: "fa-solid fa-mobile-button",
+        image: "assets/img/products/celulares/iPhone 11 64GB Reacondicionado.webp",
         description: "Equipo revisado, con batería nueva y garantía de 3 meses.",
         badge: "Popular"
     },
@@ -123,6 +133,7 @@ window.EasyReaple.products = [
         category: "equipos",
         brand: "android",
         icon: "fa-solid fa-mobile-button",
+        image: "assets/img/products/celulares/Redmi_Note_11_Tornasol.webp",
         description: "Excelente relación precio-calidad, listo para usar.",
         badge: null
     }
