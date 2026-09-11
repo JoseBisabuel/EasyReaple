@@ -604,9 +604,13 @@
 
     }
 
+    /* El logo es cuadrado (885x885): se limita la ALTURA, no
+       el ancho, para que siempre quepa dentro de la barra del
+       header sin desbordarse ni verse desproporcionado. */
     .logo img{
 
-        width:135px;
+        width:auto;
+        height:54px;
 
     }
 
@@ -627,7 +631,8 @@
 
     .logo img{
 
-        width:125px;
+        width:auto;
+        height:48px;
 
     }
 
