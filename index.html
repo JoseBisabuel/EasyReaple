@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ==========================================================
+        CONFIGURACIÓN GENERAL
+        Este bloque contiene la configuración básica del documento.
+        ========================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ==========================================================
+        INFORMACIÓN SEO
+        Estos datos ayudan a Google y a las redes sociales a
+        entender de qué trata la página.
+        ========================================================== -->
+    <title>EasyReaple | Servicio Técnico Especializado Apple y Android</title>
+
+    <meta name="description"
+        content="Servicio técnico especializado en dispositivos Apple (iOS) y Android. Venta de equipos, repuestos, accesorios y soporte técnico profesional.">
+
+    <meta name="keywords"
+        content="EasyReaple, reparación celulares, Apple, Android, Neiva, iPhone, servicio técnico">
+
+    <meta name="author" content="EasyReaple">
+
+    <!-- ==========================================================
+        ICONO Y PWA
+        ========================================================== -->
+    <link rel="icon" type="image/png" href="assets/img/logo/LogoEasyReaple.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0A84FF">
+
+    <!-- ==========================================================
+        GOOGLE FONTS
+        Fuente principal utilizada en toda la página.
+        ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================================
+        FONT AWESOME
+        Biblioteca de iconos.
+        ========================================================== -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- ==========================================================
+        HOJAS DE ESTILO
+        ========================================================== -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/services.css">
+    <link rel="stylesheet" href="assets/css/products.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+        PANTALLA DE CARGA
+        ========================================================== -->
+
+    <div class="page-loader" id="pageLoader">
+
+        <img src="assets/img/logo/LogoEasyReaple.png" alt="EasyReaple" class="loader-logo">
+
+        <div class="loader-bar"><span></span></div>
+
+    </div>
+
+    <!-- ==========================================================
+        FONDO OSCURO DEL MENÚ MÓVIL
+        ========================================================== -->
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ==========================================================
+        HEADER PRINCIPAL
+        Este encabezado permanecerá fijo en la parte superior.
+        Contiene:
+
+        - Logo
+        - Menú
+        - Buscador
+        - Botón WhatsApp
+        - Menú móvil
+        ========================================================== -->
+
+    <header class="header">
+
+        <div class="container header-container">
+
+            <a href="#inicio" class="logo">
+
+                <img src="assets/img/logo/LogoEasyReaple.png"
+                    alt="Logo EasyReaple">
+
+            </a>
+
+            <nav class="navbar">
+
+                <!-- Buscador visible solo dentro del menú móvil -->
+                <div class="search-box mobile-search-box">
+
+                    <input type="text" class="search-input" placeholder="Buscar...">
+
+                    <button class="search-btn" aria-label="Buscar">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
+
+                </div>
+
+                <ul class="nav-menu">
+
+                    <li><a href="#inicio">Inicio</a></li>
+
+                    <li><a href="#servicios">Servicios</a></li>
+
+                    <li><a href="#catalogo">Catálogo</a></li>
+
+                    <li><a href="#galeria">Galería</a></li>
+
+                    <li><a href="#sobremi">Nosotros</a></li>
+
+                    <li><a href="#tecnologia">Tecnología</a></li>
+
+                    <li><a href="#contacto">Contacto</a></li>
+
+                </ul>
+
+            </nav>
+
+            <!-- ==========================================================
+                BUSCADOR
+                Permitirá buscar productos, servicios y repuestos.
+                Más adelante será conectado con JavaScript.
+                ========================================================== -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Buscar...">
+
+                <button class="search-btn" aria-label="Buscar">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+            </div>
+
+            <!-- ==========================================================
+                BOTÓN PRINCIPAL DE WHATSAPP
+                ========================================================== -->
+
+            <a href="https://wa.me/573044070897"
+                target="_blank"
+                class="btn-primary">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                WhatsApp
+
+            </a>
+
+            <!-- ==========================================================
+                BOTÓN MENÚ MÓVIL
+                ========================================================== -->
+
+            <button class="menu-toggle" aria-label="Abrir menú">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- ==========================================================
+        CONTENIDO PRINCIPAL
+        ========================================================== -->
+
+    <main>
+
+        <!-- ==========================================================
+            HERO
+            Esta será la primera sección que verá el visitante.
+            Debe transmitir confianza y explicar rápidamente quién eres.
+            ========================================================== -->
+
+        <section class="hero" id="inicio">
+
+            <!-- Fondo animado -->
+            <div id="particles-js"></div>
+
+            <div class="container hero-container">
+
+                <!-- ===============================
+                    INFORMACIÓN PRINCIPAL
+                ================================ -->
+
+                <div class="hero-content">
+
+                    <h1>
+
+                        Hola, bienvenidos a <span>EasyReaple</span>
+
+                    </h1>
+
+                    <p>
+
+                        Especialistas en reparación y programación de dispositivos
+                        <strong>Apple (iOS)</strong> y <strong>Android</strong>.
+
+                        Nuestro objetivo es ofrecer un servicio técnico profesional,
+                        transparente y con atención personalizada para cada cliente.
+
+                    </p>
+
+                    <!-- ===========================================
+                        INFORMACIÓN RÁPIDA
+                        =========================================== -->
+
+                    <div class="hero-info">
+
+                        <div>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Neiva, Huila
+
+                        </div>
+
+                        <div>
+
+                            <i class="fa-solid fa-truck-fast"></i>
+
+                            Recibimos envíos a nivel nacional
+
+                        </div>
+
+                    </div>
+
+                    <!-- ===========================================
+                        BOTONES DEL HERO
+                        =========================================== -->
+
+                    <div class="hero-buttons">
+
+                        <a href="https://wa.me/573044070897"
+                            target="_blank"
+                            class="btn-primary">
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                            Cotizar ahora
+
+                        </a>
+
+                        <a href="#servicios"
+                            class="btn-secondary">
+
+                            Ver servicios
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- ===============================
+                    FOTOGRAFÍA
+                ================================ -->
+
+                
+
+            </div>
+
+        </section>
+
+        <!-- ==========================================================
+            POR QUÉ ELEGIR EASYREAPLE
+        ========================================================== -->
+
+<section class="services" id="servicios">
+
+    <div class="container">
+
+        <span class="section-subtitle">
+
+            ¿POR QUÉ ELEGIRNOS?
+
+        </span>
+
+        <h2 class="section-title">
+
+            Un servicio técnico pensado para darte tranquilidad.
+
+        </h2>
+
+        <p class="section-description">
+
+            Trabajo cada reparación con responsabilidad, repuestos de calidad y diagnóstico transparente para que tengas la seguridad de dejar tu equipo en buenas manos.
+
+        </p>
+
+        <div class="services-grid">
+
+            <article class="service-card reveal">
+
+                <i class="fa-brands fa-apple"></i>
+
+                <h3>Especialista Apple y Android</h3>
+
+                <p>
+                    Reparación y programación de dispositivos iPhone, iPad y equipos Android.
+                </p>
+
+            </article>
+
+            <article class="service-card reveal">
+
+                <i class="fa-solid fa-microchip"></i>
+
+                <h3>Repuestos de Calidad</h3>
+
+                <p>
+                    Pantallas, baterías, cámaras, flex, conectores y componentes seleccionados.
+                </p>
+
+            </article>
+
+            <article class="service-card reveal">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>Trabajo Garantizado</h3>
+
+                <p>
+                    Cada servicio se entrega probado y con garantía según el tipo de reparación.
+                </p>
+
+            </article>
+
+            <article class="service-card reveal">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+                <h3>Atención Nacional</h3>
+
+                <p>
+                    Recibo equipos desde cualquier ciudad de Colombia mediante envíos seguros.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+    NOSOTROS
+========================================================== -->
+
+<section class="about" id="sobremi">
+
+    <div class="container about-container">
+
+        <div class="about-content reveal">
+
+            <span class="section-subtitle">SOBRE NOSOTROS</span>
+
+            <h2 class="section-title">Pasión por la tecnología, compromiso contigo</h2>
+
+            <p>
+                En EasyReaple trabajamos cada equipo como si fuera propio. Nos especializamos en la
+                reparación y programación de dispositivos Apple y Android, combinando repuestos de
+                calidad, diagnóstico honesto y atención cercana para que sepas exactamente qué le
+                pasa a tu equipo y cómo lo solucionamos.
+            </p>
+
+            <div class="about-stats">
+
+                <div>
+                    <strong>+500</strong>
+                    <span>Equipos reparados</span>
+                </div>
+
+                <div>
+                    <strong>+3</strong>
+                    <span>Años de experiencia</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>Clientes satisfechos</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="about-image reveal">
+
+            <img src="assets/img/profile/soyyo.png" alt="Equipo técnico de EasyReaple">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+    NUESTRA TECNOLOGÍA / EQUIPOS DE TRABAJO
+========================================================== -->
+
+<section class="equipment" id="tecnologia">
+
+    <div class="container">
+
+        <span class="section-subtitle">NUESTRA TECNOLOGÍA</span>
+
+        <h2 class="section-title">Trabajamos con los equipos adecuados</h2>
+
+        <p class="section-description">
+            Invertimos en herramientas profesionales para que cada diagnóstico y cada reparación
+            sean precisos, seguros y confiables.
+        </p>
+
+        <div class="services-grid">
+
+            <article class="service-card reveal">
+                <i class="fa-solid fa-microscope"></i>
+                <h3>Microscopio de precisión</h3>
+                <p>
+                    Para microsoldadura y diagnóstico de fallas a nivel de componente en placa.
+                </p>
+            </article>
+
+            <article class="service-card reveal">
+                <i class="fa-solid fa-fire"></i>
+                <h3>Estación de soldadura</h3>
+                <p>
+                    Soldadura profesional para reparaciones delicadas de tarjeta.
+                </p>
+            </article>
+
+            <article class="service-card reveal">
+                <i class="fa-solid fa-layer-group"></i>
+                <h3>Separadora de pantallas</h3>
+                <p>
+                    Retiro y reemplazo de pantallas sin dañar el resto del equipo.
+                </p>
+            </article>
+
+            <article class="service-card reveal">
+                <i class="fa-solid fa-wind"></i>
+                <h3>Estación de aire caliente</h3>
+                <p>
+                    Desmontaje seguro de componentes soldados en la placa.
+                </p>
+            </article>
+
+            <article class="service-card reveal">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Software de diagnóstico</h3>
+                <p>
+                    Herramientas especializadas para calibración y programación de equipos.
+                </p>
+            </article>
+
+            <article class="service-card reveal">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>Herramientas de precisión</h3>
+                <p>
+                    Kit antiestático para proteger los componentes internos de tu equipo.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+    CATÁLOGO DE PRODUCTOS
+========================================================== -->
+
+<section class="products" id="catalogo">
+
+    <div class="container">
+
+        <span class="section-subtitle">NUESTRO CATÁLOGO</span>
+
+        <h2 class="section-title">Todo lo que tu dispositivo necesita</h2>
+
+        <p class="section-description">
+            Repuestos, accesorios y equipos reacondicionados con la calidad que tu dispositivo merece.
+            Usa los filtros o el buscador del menú para encontrar justo lo que buscas.
+        </p>
+
+        <div class="products-filters" id="brandFilters">
+
+            <button class="filter-btn active" data-brand="todas">Todas las marcas</button>
+
+            <button class="filter-btn" data-brand="apple">Apple</button>
+
+            <button class="filter-btn" data-brand="android">Android</button>
+
+        </div>
+
+        <div class="products-filters" id="productFilters">
+
+            <button class="filter-btn active" data-category="todos">Todos</button>
+
+            <button class="filter-btn" data-category="pantallas">Pantallas</button>
+
+            <button class="filter-btn" data-category="baterias">Baterías</button>
+
+            <button class="filter-btn" data-category="accesorios">Accesorios</button>
+
+            <button class="filter-btn" data-category="repuestos">Repuestos</button>
+
+            <button class="filter-btn" data-category="equipos">Equipos</button>
+
+        </div>
+
+        <!-- Las tarjetas de producto se generan dinámicamente desde assets/js/data.js -->
+        <div class="products-grid" id="productsGrid"></div>
+
+        <p class="products-empty" id="productsEmpty" hidden>
+            No encontramos productos que coincidan con tu búsqueda.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+    GALERÍA DE TRABAJOS
+========================================================== -->
+
+<section class="gallery" id="galeria">
+
+    <div class="container">
+
+        <span class="section-subtitle">NUESTRO TRABAJO</span>
+
+        <h2 class="section-title">Reparaciones que hablan por sí solas</h2>
+
+        <p class="section-description">
+            Una muestra de los equipos que hemos reparado. Muy pronto con fotos reales de cada trabajo.
+        </p>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item reveal">
+                <i class="fa-brands fa-apple"></i>
+                <div class="gallery-caption">
+                    <strong>iPhone 13 Pro</strong>
+                    <span>Cambio de pantalla</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <div class="gallery-caption">
+                    <strong>Samsung Galaxy S21</strong>
+                    <span>Cambio de batería</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal">
+                <i class="fa-brands fa-apple"></i>
+                <div class="gallery-caption">
+                    <strong>iPhone 11</strong>
+                    <span>Reparación de placa</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal">
+                <i class="fa-solid fa-camera-retro"></i>
+                <div class="gallery-caption">
+                    <strong>Samsung A52</strong>
+                    <span>Cambio de cámara</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal">
+                <i class="fa-solid fa-plug-circle-bolt"></i>
+                <div class="gallery-caption">
+                    <strong>iPhone XR</strong>
+                    <span>Reparación de puerto de carga</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal">
+                <i class="fa-brands fa-android"></i>
+                <div class="gallery-caption">
+                    <strong>Redmi Note 11</strong>
+                    <span>Cambio de pantalla</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal">
+                <i class="fa-solid fa-microchip"></i>
+                <div class="gallery-caption">
+                    <strong>iPad 9na Gen</strong>
+                    <span>Cambio de flex</span>
+                </div>
+            </div>
+
+            <div class="gallery-item reveal">
+                <i class="fa-brands fa-apple"></i>
+                <div class="gallery-caption">
+                    <strong>iPhone 12</strong>
+                    <span>Diagnóstico y limpieza</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+    TESTIMONIOS
+========================================================== -->
+
+<section class="testimonials" id="testimonios">
+
+    <div class="container">
+
+        <span class="section-subtitle">TESTIMONIOS</span>
+
+        <h2 class="section-title">La confianza de nuestros clientes</h2>
+
+        <div class="testimonial-slider">
+
+            <!-- Las tarjetas se generan dinámicamente desde assets/js/data.js -->
+            <div class="testimonial-track" id="testimonialTrack"></div>
+
+            <div class="testimonial-dots" id="testimonialDots"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+    CONTACTO
+========================================================== -->
+
+<section class="contact" id="contacto">
+
+    <div class="container">
+
+        <span class="section-subtitle">CONTACTO</span>
+
+        <h2 class="section-title">Hablemos de tu equipo</h2>
+
+        <p class="section-description">
+            Escríbenos y te responderemos lo antes posible por WhatsApp.
+        </p>
+
+        <div class="contact-info reveal">
+
+            <div class="contact-info-grid">
+
+                <div class="contact-info-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <h4>Ubicación</h4>
+                    <p>Neiva, Huila &mdash; Colombia</p>
+
+                </div>
+
+                <div class="contact-info-item">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <h4>WhatsApp</h4>
+                    <p>+57 304 407 0897</p>
+
+                </div>
+
+                <div class="contact-info-item">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <h4>Horario</h4>
+                    <p>Lunes a sábado: 9:00 am &ndash; 7:00 pm</p>
+
+                </div>
+
+                <div class="contact-info-item">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <h4>Envíos</h4>
+                    <p>A nivel nacional</p>
+
+                </div>
+
+            </div>
+
+            <a href="https://wa.me/573044070897?text=Hola%2C%20quiero%20informaci%C3%B3n" target="_blank" class="btn-primary contact-cta">
+                <i class="fa-brands fa-whatsapp"></i> Escríbenos por WhatsApp
+            </a>
+
+            <div class="contact-social">
+
+                <a href="#" aria-label="Instagram de EasyReaple"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#" aria-label="Facebook de EasyReaple"><i class="fa-brands fa-facebook"></i></a>
+
+                <a href="https://wa.me/573044070897" target="_blank" aria-label="WhatsApp de EasyReaple"><i class="fa-brands fa-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- ==========================================================
+        PIE DE PÁGINA
+        ========================================================== -->
+
+    <footer>
+
+        <div class="container footer-container">
+
+            <div class="footer-col footer-about">
+
+                <img src="assets/img/logo/LogoEasyReaple.png" alt="Logo EasyReaple" class="footer-logo">
+
+                <p>
+                    Servicio técnico especializado en dispositivos Apple y Android en Neiva, Huila.
+                    Reparación, repuestos y venta de equipos con garantía.
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="#" aria-label="Instagram de EasyReaple"><i class="fa-brands fa-instagram"></i></a>
+
+                    <a href="#" aria-label="Facebook de EasyReaple"><i class="fa-brands fa-facebook"></i></a>
+
+                    <a href="https://wa.me/573044070897" target="_blank" aria-label="WhatsApp de EasyReaple"><i class="fa-brands fa-whatsapp"></i></a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h4>Navegación</h4>
+
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#sobremi">Nosotros</a></li>
+                    <li><a href="#tecnologia">Tecnología</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h4>Servicios</h4>
+
+                <ul>
+                    <li>Reparación Apple</li>
+                    <li>Reparación Android</li>
+                    <li>Venta de repuestos</li>
+                    <li>Equipos reacondicionados</li>
+                </ul>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h4>Contacto</h4>
+
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i>Neiva, Huila</li>
+                    <li><i class="fa-brands fa-whatsapp"></i>+57 304 407 0897</li>
+                    <li><i class="fa-solid fa-clock"></i>Lun - Sáb: 9am - 7pm</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>&copy; <span id="currentYear"></span> EasyReaple. Todos los derechos reservados.</p>
+
+            <p class="footer-credit">
+                Desarrollado por <strong>NOVA STUDIO 2024</strong>
+                <a href="https://wa.me/573193034610" target="_blank" aria-label="Contactar a NOVA STUDIO por WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i> Contáctanos
+                </a>
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ==========================================================
+        BOTÓN FLOTANTE DE WHATSAPP
+        ========================================================== -->
+
+    <a href="https://wa.me/573044070897?text=Hola%2C%20quiero%20informaci%C3%B3n"
+        target="_blank"
+        class="whatsapp-float"
+        id="whatsappFloat"
+        aria-label="Escríbenos por WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+    <!-- ==========================================================
+        ARCHIVOS JAVASCRIPT
+        ========================================================== -->
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/filters.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/whatsapp.js"></script>
+
+<!-- Librería de partículas -->
+<script src="assets/js/particles.min.js"></script>
+
+<!-- Tu aplicación -->
+<script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
