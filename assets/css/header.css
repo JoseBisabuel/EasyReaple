@@ -229,7 +229,11 @@
 
 ==========================================================*/
 
-.mobile-search-box{
+/* Selector combinado (.search-box.mobile-search-box) para que
+   siempre gane sobre ".search-box", sin importar el orden en
+   el archivo: antes quedaba visible en todos los tamaños por
+   un empate de especificidad, duplicando el buscador. */
+.search-box.mobile-search-box{
 
     display:none;
 
@@ -534,7 +538,7 @@
         Buscador dentro del menú móvil.
     ------------------------------------------------------*/
 
-    .mobile-search-box{
+    .search-box.mobile-search-box{
 
         display:flex;
         width:100%;
